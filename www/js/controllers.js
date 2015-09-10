@@ -41,6 +41,12 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('HomeCtrl', function($scope, $http) {
+  $http.get('http://www.proportal.co.za/_mobi_app/accomm.php').success(function(data) {
+    $scope.accommodations = data;
+  })
+})
+
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
