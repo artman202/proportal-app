@@ -1,8 +1,25 @@
 <ion-view view-title="Home">
   <ion-content>
-    <h1>This is the homepage</h1>
-    <p ng-repeat="accommodation in accommodations">
-    	{{accommodation | json}}	
-    </p>
+    <div class="row">
+  		<div class="col" align="center">Proportal Logo</div>
+  	</div>
+    <div class="list list-inset">
+		  <label class="item item-input">
+		    <i class="icon ion-search placeholder-icon"></i>
+		    <input type="text" placeholder="Search">
+		  </label>
+		</div>
+		<div class="row">
+			<div class="col">
+				<a class="button button-block" ng-href="#/app/provinces">
+				  Provinces
+				</a>
+			</div>
+			<div class="col">
+				<a class="button button-block">
+				  Near
+				</a>
+			</div>
+		</div>
   </ion-content>
 </ion-view>

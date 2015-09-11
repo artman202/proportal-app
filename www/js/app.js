@@ -42,6 +42,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.provinces', {
+    url: '/provinces',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/provinces.html',
+        controller: 'ProvincesCtrl'
+      }
+    }
+  })
+
+  .state('app.cities', {
+    url: '/cities/:provinceId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/cities.html',
+        controller: 'CitiesCtrl'
+      }
+    }
+  })
+
   .state('app.search', {
     url: '/search',
     views: {

@@ -1,0 +1,11 @@
+<ion-view view-title="Provinces">
+  <ion-content>
+    <ion-list>
+    	<div class="row responsive-sm" align="center">
+  			<a ng-repeat="province in provinces" class="button btn-province" ng-href="#/app/cities/{{province.id}}">
+	  			{{province.name}}
+	  		</a>
+    	</div>     
+    </ion-list>
+  </ion-content>
+</ion-view>

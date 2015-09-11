@@ -41,11 +41,41 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('HomeCtrl', function($scope, $http) {
-  $http.get('http://www.proportal.co.za/_mobi_app/accomm.php').success(function(data) {
-    $scope.accommodations = data;
-  })
+.controller('HomeCtrl', function($scope, $ionicHistory) {
+
+  $ionicHistory.nextViewOptions({
+    disableBack: true
+  }); 
+
 })
+
+.controller('ProvincesCtrl', function($scope) {
+
+  $scope.provinces = [
+    {'id':'ec', 'name':'Eastern Cape'},
+    {'id':'fs', 'name':'Free State'},
+    {'id':'ga', 'name':'Gauteng'},
+    {'id':'kn', 'name':'KwaZulu-Natal'},
+    {'id':'li', 'name':'Limpopo'},
+    {'id':'mp', 'name':'Mpumalanga'},
+    {'id':'nc', 'name':'Northern Cape'},
+    {'id':'nw', 'name':'North West'},
+    {'id':'wc', 'name':'Western Cape'}
+  ];
+
+})
+
+.controller('CitiesCtrl', function($scope, $stateParams) {
+
+  $scope.provinceId = $stateParams.provinceId;
+
+})
+
+// $http.get('http://www.proportal.co.za/_mobi_app/accomm.php').success(function(data) {
+//   $scope.accommodations = data;
+// }).error(function(data) {
+//   alert("There was an error retrieving the accomodation json");
+// });
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
