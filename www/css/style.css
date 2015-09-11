@@ -1,2 +1,7 @@
 /* Empty. Add your own CSS if you like */
+
+/*Main Template*/
+.content-padding {padding: 15px}
+.row {margin: 0; padding: 0;}
+
 .btn-province {margin: 0.5em 0}

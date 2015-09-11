@@ -1,11 +1,16 @@
 <ion-view view-title="Provinces">
-  <ion-content>
+  <ion-content class="content-padding">
     <ion-list>
-    	<div class="row responsive-sm" align="center">
-  			<a ng-repeat="province in provinces" class="button btn-province" ng-href="#/app/cities/{{province.id}}">
-	  			{{province.name}}
-	  		</a>
-    	</div>     
+    	<div ng-repeat="province in provinces">
+	    	<div class="row" ng-if="$even">
+	  			<a class="button btn-province col col-50" ng-href="#/app/cities/{{provinces[$index].id}}" ng-show="provinces[$index].name.length > 0">
+		  			{{provinces[$index].name}}
+		  		</a>
+		  		<a class="button btn-province col col-50" ng-href="#/app/cities/{{provinces[$index+1].id}}" ng-show="provinces[$index+1].name.length > 0">
+		  			{{provinces[$index+1].name}}
+		  		</a>
+		    </div>
+		</div> 
     </ion-list>
   </ion-content>
 </ion-view>
